@@ -5,23 +5,23 @@ const db = require('./models');
 const relationshipCrud = async () => {
     try {
         // CREATE
-            //find a user
-            // const foundUser = await db.user.findOne({
-            //     where: {
-            //         firstName: 'Jason'
-            //     }
-            // }) // finds first available user
+            // find a user
+            const foundUser = await db.user.findOne({
+                where: {
+                    firstName: 'Jason'
+                }
+            }) // finds first available user
             // give him/her a pet
-            // const petMongoose = await foundUser.createPet({
-            //     name: 'Stella',
-            //     description: 'The Spoiled Mongoose',
+            const petMongoose = await foundUser.createPet({
+                name: 'Apollo',
+                description: 'The Well-Behaved Mongoose',
 
-            // });
-            // console.log(petMongoose);
+            });
+            console.log(petMongoose);
         // READ
-        // const mongooseOwner = await petMongoose.getUser()
-        // const pets = await foundUser.getPets();
-        // console.log(pets);
+        const mongooseOwner = await petMongoose.getUser()
+        const pets = await mongooseOwner.getPets();
+        console.log(pets);
 
         // Eager Loading
         const eagerLoaded = await db.user.findOne({

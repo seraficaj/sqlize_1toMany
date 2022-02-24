@@ -12,7 +12,7 @@ module.exports = (sequelize, DataTypes) => {
     static associate(models) {
       // define association here
       // 1 user:many user is the parent
-      models.user.hasMany(models.pet)
+      models.user.hasMany(models.pet, {onDelete: 'cascade'})
     }
   }
   user.init({
