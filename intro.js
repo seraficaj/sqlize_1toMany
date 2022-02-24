@@ -29,13 +29,13 @@ async function userCrud() {
     // fancy find or create sequlize function
     const arrayFromSequelize = await db.user.findOrCreate({
       where: { 
-        firstName: 'April'
+        firstName: 'Jason'
        }, 
        defaults: {
-        firstName: 'April',
-        lastName: 'Gonzales',
+        firstName: 'Jason',
+        lastName: 'Serafica',
         age: 26,
-        email: 'april.gonzalos@generalassemb.ly',
+        email: 'jason.serafica@generalassemb.ly',
         birthday: new Date()
        }
     })
@@ -116,7 +116,7 @@ async function findAllUsers() {
   }
 }
 
-// findAllUsers()
+findAllUsers()
 // UPDATE
 
 // DESTROY
