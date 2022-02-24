@@ -11,6 +11,8 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
+      // pet is the child in the relationship
+      models.pet.belongsTo(models.user)
     }
   }
   pet.init({
